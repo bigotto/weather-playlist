@@ -11,6 +11,9 @@ app.get('', (req, res) => {
 
 app.get('/city', (req, res) => {
     const city = req.query.name
+    if(!city){
+        return res.status(400).send('Insira um nome de uma cidade')
+    }
     getTemperatureCity(city, (error, temp) => {
         if (error) {
             return res.send(error)
@@ -27,6 +30,9 @@ app.get('/city', (req, res) => {
 
 app.get('/coord', (req, res) => {
     const { lat, lon } = req.query
+    if(!city){
+        return res.status(400).send('Insira as coordenadas geográficas, latitude e longitude.')
+    }
     getTemperatureCoord(lat, lon, (error, temp) => {
         if (error) {
             return res.send(error)

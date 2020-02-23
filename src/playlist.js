@@ -79,6 +79,9 @@ const getPlaylist = (genre, callback) => {
 						id: body.playlists.items[0].id
 					})			
 				}
+				else {
+					callback('Unable to find playlist')
+				}
 			})
 		}
 	})
