@@ -7,7 +7,7 @@ API que retorna as faixas de uma playlist do Spotify, selecionando o genêro de 
 - **[GET]** localhost:3000/city?name={cidade}
 - **[GET]** localhost:3000/coord?lat={latitude}&lon={longitude}
 
-####Execução
+### Execução
 Para executar API:
 
 `$ npm install `
